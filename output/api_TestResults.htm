@@ -1,0 +1,768 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html>
+    <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tesla API QA Automation Test Results</title>
+    <style type="text/css">
+      body { font-family: Lato,arial; color:#191919; font-size: 12px; }
+      table tr td, table tr th { font-family: verdana,arial,helvetica; font-size: 12px; }
+      table { table-layout: fixed; }
+      td { width: 20%; }
+      table.details tr th{ font-family: verdana,arial,helvetica; font-weight: bold; text-align:left; background:#a6caf0; }
+      table.details tr td{ background:#eeeee0; }
+      p { line-height:1.5em; margin-top:0.5em; margin-bottom:1.0em; font-size: 12px; }
+      h1 { margin: 0px 0px 5px; font-family: verdana,arial,helvetica; }
+      h3 { margin-top: 1em; margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h3 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h4 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h5 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h6 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      .Error { font-weight:bold; color:red; }
+      .Failure { font-weight:bold; color:purple; }
+      .small { font-size: 9px; }
+      a { color: #003399; }
+      a:hover { color: #888888; }
+    </style>
+    </head>
+    <body>
+    <a name="top"></a>
+  <table border="1" cellpadding="5" cellspacing="3" bordercolor="#34495e" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">  
+  <th  valign="middle" align="middle"><img src="logo.png" alt="header-logo" align="left" /><h2><font color="#ecf0f1">Tesla API Automation Framework</font></h2></th>
+  </tr>
+  </table>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <td><font color="#ecf0f1">Report generated at 2014-08-15 16:05:56 -0700</font></td><td><font color="#ecf0f1">Contact Tesla Automation Team: <a href="mailto:mohamed.elzein@xypro.com?Subject=Automation questions" target="_top"><font color="#ecf0f1">eMail Us</font></a></td>
+  </tr>
+  </table>
+  
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertCount/monitorAlertCount</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitorAlertCount</td>
+    <td align="middle">{"error":{"num":1,"msg":"Required int parameter 'monitorId' is not present"}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #e74c3c">Failed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertHistory/ClearAll </td>
+    <td align="middle">post</td>
+    <td align="middle">/alertHistory/clearAll?attributeId=-1&entityId=1118206&monitorId=1309&userId=1000&commentText=test</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"alerts":{"entityId":1118206,"flag":"TRUE","attributeId":"-1"}}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertHistory/Read</td>
+    <td align="middle">get</td>
+    <td align="middle">/alertHistory/read?attributeId=-1&entityId=1118206&monitorId=1309&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No error"},"data":{"summary":{"subsystemId":3,"subsystemName":"Safeguard","entityTypeId":1,"entityTypeName":"User","nodeId":1,"nodeName":"\\EST1983","entityName":"TESLA.OWNER","attributeId":-1,"attributeName":"","totalChanged":0,"totalNew":1,"totalMissing":3,"alertHistoryType":"Entity"},"alertHistory":[{"alertId":9016315,"alertTypeName":"Missing","alertGeneratedTS":"2014-08-11 14:38:15","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-15 16:06:06","comments":[{"commentId":30469,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-15 16:06:06"}]},{"alertId":8978310,"alertTypeName":"New","alertGeneratedTS":"2014-06-13 00:04:42","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-08 14:12:22","comments":[{"commentId":30447,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-08 14:12:22"}]},{"alertId":8974550,"alertTypeName":"Missing","alertGeneratedTS":"2014-06-12 23:49:42","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-08 14:12:22","comments":[{"commentId":30446,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-08 14:12:22"}]},{"alertId":8922306,"alertTypeName":"Missing","alertGeneratedTS":"2014-05-28 11:49:09","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-06-02 11:33:47","comments":[{"commentId":19657,"commentUserName":"AndrewPrice","commentText":"This is line 1\\\\nThis is line 2\\\\nThis is line 3","commentTS":"2014-05-30 11:11:28"},{"commentId":19675,"commentUserName":"AndrewPrice","commentText":"NM - OK","commentTS":"2014-06-02 11:33:47"}]}]}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Dashboard/updateCardOrder</td>
+    <td align="middle">post</td>
+    <td align="middle">/dashboard/updateCardOrder?cardOrder=462,481,464,467,169,465&userId=1000</td>
+    <td align="middle"></td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #e74c3c">Failed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Group/MonitorList</td>
+    <td align="middle">get</td>
+    <td align="middle">/group/monitorList?groupId=375&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"groupId":375,"monitors":[{"monitorId":1448,"monitorName":"asfaf","hasAlert":true,"isActive":true},{"monitorId":1480,"monitorName":"Cake","hasAlert":true,"isActive":true},{"monitorId":1553,"monitorName":"Cake2","hasAlert":true,"isActive":true},{"monitorId":1458,"monitorName":"new1234","hasAlert":true,"isActive":true},{"monitorId":1309,"monitorName":"USER TESLA.*","hasAlert":true,"isActive":true},{"monitorId":1460,"monitorName":"Zzz","hasAlert":true,"isActive":true}]}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Monitor/read</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitor/read?monitorId=1309&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"monitorDefinition":{"monitorId":1309,"monitorName":"USER TESLA.*","visibility":"Private","groups":[169,215,375],"criticality":"High","entityTypeId":1,"analysisType":"Integrity Check","alertSettings":{"onMissing":true,"onNew":true,"active":true},"nodeFilter":"","entityFilter":"TESLA.*","attributes":[{"attributeTypeId":3,"orderSeqNo":1,"alert":true},{"attributeTypeId":4,"orderSeqNo":2,"alert":true},{"attributeTypeId":5,"orderSeqNo":3,"alert":true},{"attributeTypeId":6,"orderSeqNo":4,"alert":true},{"attributeTypeId":7,"orderSeqNo":5,"alert":true},{"attributeTypeId":8,"orderSeqNo":6,"alert":true},{"attributeTypeId":10,"orderSeqNo":7,"alert":true},{"attributeTypeId":11,"orderSeqNo":8,"alert":true},{"attributeTypeId":12,"orderSeqNo":9,"alert":true},{"attributeTypeId":13,"orderSeqNo":10,"alert":true},{"attributeTypeId":14,"orderSeqNo":11,"alert":true},{"attributeTypeId":15,"orderSeqNo":12,"alert":true},{"attributeTypeId":16,"orderSeqNo":13,"alert":true},{"attributeTypeId":18,"orderSeqNo":14,"alert":true},{"attributeTypeId":19,"orderSeqNo":15,"alert":true},{"attributeTypeId":20,"orderSeqNo":16,"alert":true},{"attributeTypeId":21,"orderSeqNo":17,"alert":true},{"attributeTypeId":22,"orderSeqNo":18,"alert":true},{"attributeTypeId":23,"orderSeqNo":19,"alert":true}]}}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Monitor/AlertCount</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitorAlertCount?monitorId=1460</td>
+    <td align="middle">{"error":{"num":0,"msg":"No error"},"data":{"monitorId":1460,"monitorName":"Zzz","totalAlerts":256,"changedCount":0,"missingCount":137,"newCount":119,"lastUpdateTimestamp":"2014-08-15 16:06:31"}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+  <hr size="1">
+  <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+    <tr align="middle">
+    <td bgcolor="#e74c3c"><h3><font color="#ecf0f1">Failed Tests Report</font></h3></td>
+    </tr>
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>Failed Test Cases</th><th>Time</th>
+    </tr>
+    
+    <tr valign="middle" class="" align="middle" bgcolor="#ecf0f1">
+    <td align="middle">AlertCount/monitorAlertCountDashboard/updateCardOrder</td>
+    <td align="middle">2014-08-15 16:06:31 -0700</td>
+    </tr>
+    </table>
+  
+ <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+    <tr align="middle">
+    <td bgcolor="#e74c3c"><h3><font color="#ecf0f1">API Test Report Summary</font></h3></td>
+    </tr>
+  <tr valign="middle" bgcolor="#bdc3c7" align="middle">
+  <th>Tests</th><th>Pass</th><th>Failures</th><th>Success rate</th><th>Time</th>
+  </tr>
+  <tr valign="middle" class="" align="middle" bgcolor="#ecf0f1">
+  <td>7</td><td>5</td><td>2</td><td>71.43%</td><td>2014-08-15 16:06:31 -0700</td>
+  </tr>
+  </table>
+  <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr><p></p></tr>
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <th><h3><font color="#ecf0f1">End of the API test suite</h3></th>
+  </tr>
+  </table>
+  <a href="#top">Back to top</a>
+  <table width="100%">
+  <tr>
+  <td>
+  <hr noshade="yes" size="1">
+  </td>
+  </tr>
+  </table>
+  </body>
+  </html>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html>
+    <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tesla API QA Automation Test Results</title>
+    <style type="text/css">
+      body { font-family: Lato,arial; color:#191919; font-size: 12px; }
+      table tr td, table tr th { font-family: verdana,arial,helvetica; font-size: 12px; }
+      table { table-layout: fixed; }
+      td { width: 20%; }
+      table.details tr th{ font-family: verdana,arial,helvetica; font-weight: bold; text-align:left; background:#a6caf0; }
+      table.details tr td{ background:#eeeee0; }
+      p { line-height:1.5em; margin-top:0.5em; margin-bottom:1.0em; font-size: 12px; }
+      h1 { margin: 0px 0px 5px; font-family: verdana,arial,helvetica; }
+      h3 { margin-top: 1em; margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h3 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h4 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h5 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h6 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      .Error { font-weight:bold; color:red; }
+      .Failure { font-weight:bold; color:purple; }
+      .small { font-size: 9px; }
+      a { color: #003399; }
+      a:hover { color: #888888; }
+    </style>
+    </head>
+    <body>
+    <a name="top"></a>
+  <table border="1" cellpadding="5" cellspacing="3" bordercolor="#34495e" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">  
+  <th  valign="middle" align="middle"><img src="logo.png" alt="header-logo" align="left" /><h2><font color="#ecf0f1">Tesla API Automation Framework</font></h2></th>
+  </tr>
+  </table>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <td><font color="#ecf0f1">Report generated at 2014-08-20 10:18:08 -0700</font></td><td><font color="#ecf0f1">Contact Tesla Automation Team: <a href="mailto:mohamed.elzein@xypro.com?Subject=Automation questions" target="_top"><font color="#ecf0f1">eMail Us</font></a></td>
+  </tr>
+  </table>
+  
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertCount/monitorAlertCount</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitorAlertCount</td>
+    <td align="middle">{"error":{"num":1,"msg":"Required int parameter 'monitorId' is not present"}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #e74c3c">Failed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertHistory/ClearAll </td>
+    <td align="middle">post</td>
+    <td align="middle">/alertHistory/clearAll?attributeId=-1&entityId=1118206&monitorId=1309&userId=1000&commentText=test</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"alerts":{"entityId":1118206,"flag":"TRUE","attributeId":"-1"}}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertHistory/Read</td>
+    <td align="middle">get</td>
+    <td align="middle">/alertHistory/read?attributeId=-1&entityId=1118206&monitorId=1309&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No error"},"data":{"summary":{"subsystemId":3,"subsystemName":"Safeguard","entityTypeId":1,"entityTypeName":"User","nodeId":1,"nodeName":"\\EST1983","entityName":"TESLA.OWNER","attributeId":-1,"attributeName":"","totalChanged":0,"totalNew":1,"totalMissing":3,"alertHistoryType":"Entity"},"alertHistory":[{"alertId":9016315,"alertTypeName":"Missing","alertGeneratedTS":"2014-08-11 14:38:15","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-15 16:06:06","comments":[{"commentId":30469,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-15 16:06:06"}]},{"alertId":8978310,"alertTypeName":"New","alertGeneratedTS":"2014-06-13 00:04:42","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-08 14:12:22","comments":[{"commentId":30447,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-08 14:12:22"}]},{"alertId":8974550,"alertTypeName":"Missing","alertGeneratedTS":"2014-06-12 23:49:42","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-08 14:12:22","comments":[{"commentId":30446,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-08 14:12:22"}]},{"alertId":8922306,"alertTypeName":"Missing","alertGeneratedTS":"2014-05-28 11:49:09","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-06-02 11:33:47","comments":[{"commentId":19657,"commentUserName":"AndrewPrice","commentText":"This is line 1\\\\nThis is line 2\\\\nThis is line 3","commentTS":"2014-05-30 11:11:28"},{"commentId":19675,"commentUserName":"AndrewPrice","commentText":"NM - OK","commentTS":"2014-06-02 11:33:47"}]}]}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Dashboard/updateCardOrder</td>
+    <td align="middle">post</td>
+    <td align="middle">/dashboard/updateCardOrder?cardOrder=462,481,464,467,169,465&userId=1000</td>
+    <td align="middle"></td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #e74c3c">Failed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Group/MonitorList</td>
+    <td align="middle">get</td>
+    <td align="middle">/group/monitorList?groupId=375&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"groupId":375,"monitors":[{"monitorId":1309,"monitorName":"USER TESLA.*","hasAlert":true,"isActive":true},{"monitorId":1448,"monitorName":"asfaf","hasAlert":true,"isActive":true},{"monitorId":1458,"monitorName":"new1234","hasAlert":true,"isActive":true},{"monitorId":1460,"monitorName":"Zzz","hasAlert":true,"isActive":true},{"monitorId":1480,"monitorName":"Cake","hasAlert":true,"isActive":true},{"monitorId":1553,"monitorName":"Cake2","hasAlert":true,"isActive":true}]}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Monitor/read</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitor/read?monitorId=1309&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"monitorDefinition":{"monitorId":1309,"monitorName":"USER TESLA.*","visibility":"Private","groups":[169,215,375],"criticality":"High","entityTypeId":1,"analysisType":"Integrity Check","alertSettings":{"onMissing":true,"onNew":true,"active":true},"nodeFilter":"","entityFilter":"TESLA.*","attributes":[{"attributeTypeId":3,"orderSeqNo":1,"alert":true},{"attributeTypeId":4,"orderSeqNo":2,"alert":true},{"attributeTypeId":5,"orderSeqNo":3,"alert":true},{"attributeTypeId":6,"orderSeqNo":4,"alert":true},{"attributeTypeId":7,"orderSeqNo":5,"alert":true},{"attributeTypeId":8,"orderSeqNo":6,"alert":true},{"attributeTypeId":10,"orderSeqNo":7,"alert":true},{"attributeTypeId":11,"orderSeqNo":8,"alert":true},{"attributeTypeId":12,"orderSeqNo":9,"alert":true},{"attributeTypeId":13,"orderSeqNo":10,"alert":true},{"attributeTypeId":14,"orderSeqNo":11,"alert":true},{"attributeTypeId":15,"orderSeqNo":12,"alert":true},{"attributeTypeId":16,"orderSeqNo":13,"alert":true},{"attributeTypeId":18,"orderSeqNo":14,"alert":true},{"attributeTypeId":19,"orderSeqNo":15,"alert":true},{"attributeTypeId":20,"orderSeqNo":16,"alert":true},{"attributeTypeId":21,"orderSeqNo":17,"alert":true},{"attributeTypeId":22,"orderSeqNo":18,"alert":true},{"attributeTypeId":23,"orderSeqNo":19,"alert":true}]}}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Monitor/AlertCount</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitorAlertCount?monitorId=1460</td>
+    <td align="middle">{"error":{"num":0,"msg":"No error"},"data":{"monitorId":1460,"monitorName":"Zzz","totalAlerts":256,"changedCount":0,"missingCount":137,"newCount":119,"lastUpdateTimestamp":"2014-08-20 10:18:46"}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+  <hr size="1">
+  <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+    <tr align="middle">
+    <td bgcolor="#e74c3c"><h3><font color="#ecf0f1">Failed Tests Report</font></h3></td>
+    </tr>
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>Failed Test Cases</th><th>Time</th>
+    </tr>
+    
+    <tr valign="middle" class="" align="middle" bgcolor="#ecf0f1">
+    <td align="middle">AlertCount/monitorAlertCountDashboard/updateCardOrder</td>
+    <td align="middle">2014-08-20 10:18:46 -0700</td>
+    </tr>
+    </table>
+  
+ <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+    <tr align="middle">
+    <td bgcolor="#e74c3c"><h3><font color="#ecf0f1">API Test Report Summary</font></h3></td>
+    </tr>
+  <tr valign="middle" bgcolor="#bdc3c7" align="middle">
+  <th>Tests</th><th>Pass</th><th>Failures</th><th>Success rate</th><th>Time</th>
+  </tr>
+  <tr valign="middle" class="" align="middle" bgcolor="#ecf0f1">
+  <td>7</td><td>5</td><td>2</td><td>71.43%</td><td>2014-08-20 10:18:46 -0700</td>
+  </tr>
+  </table>
+  <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr><p></p></tr>
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <th><h3><font color="#ecf0f1">End of the API test suite</h3></th>
+  </tr>
+  </table>
+  <a href="#top">Back to top</a>
+  <table width="100%">
+  <tr>
+  <td>
+  <hr noshade="yes" size="1">
+  </td>
+  </tr>
+  </table>
+  </body>
+  </html>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html>
+    <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tesla API QA Automation Test Results</title>
+    <style type="text/css">
+      body { font-family: Lato,arial; color:#191919; font-size: 12px; }
+      table tr td, table tr th { font-family: verdana,arial,helvetica; font-size: 12px; }
+      table { table-layout: fixed; }
+      td { width: 20%; }
+      table.details tr th{ font-family: verdana,arial,helvetica; font-weight: bold; text-align:left; background:#a6caf0; }
+      table.details tr td{ background:#eeeee0; }
+      p { line-height:1.5em; margin-top:0.5em; margin-bottom:1.0em; font-size: 12px; }
+      h1 { margin: 0px 0px 5px; font-family: verdana,arial,helvetica; }
+      h3 { margin-top: 1em; margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h3 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h4 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h5 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h6 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      .Error { font-weight:bold; color:red; }
+      .Failure { font-weight:bold; color:purple; }
+      .small { font-size: 9px; }
+      a { color: #003399; }
+      a:hover { color: #888888; }
+    </style>
+    </head>
+    <body>
+    <a name="top"></a>
+  <table border="1" cellpadding="5" cellspacing="3" bordercolor="#34495e" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">  
+  <th  valign="middle" align="middle"><img src="logo.png" alt="header-logo" align="left" /><h2><font color="#ecf0f1">Tesla API Automation Framework</font></h2></th>
+  </tr>
+  </table>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <td><font color="#ecf0f1">Report generated at 2014-08-22 10:48:26 -0700</font></td><td><font color="#ecf0f1">Contact Tesla Automation Team: <a href="mailto:mohamed.elzein@xypro.com?Subject=Automation questions" target="_top"><font color="#ecf0f1">eMail Us</font></a></td>
+  </tr>
+  </table>
+  
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertCount/monitorAlertCount</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitorAlertCount</td>
+    <td align="middle">{"error":{"num":1,"msg":"Required int parameter 'monitorId' is not present"}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #e74c3c">Failed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertHistory/ClearAll </td>
+    <td align="middle">post</td>
+    <td align="middle">/alertHistory/clearAll?attributeId=-1&entityId=1118206&monitorId=1309&userId=1000&commentText=test</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"alerts":{"entityId":1118206,"flag":"TRUE","attributeId":"-1"}}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">AlertHistory/Read</td>
+    <td align="middle">get</td>
+    <td align="middle">/alertHistory/read?attributeId=-1&entityId=1118206&monitorId=1309&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No error"},"data":{"summary":{"subsystemId":3,"subsystemName":"Safeguard","entityTypeId":1,"entityTypeName":"User","nodeId":1,"nodeName":"\\EST1983","entityName":"TESLA.OWNER","attributeId":-1,"attributeName":"","totalChanged":0,"totalNew":1,"totalMissing":3,"alertHistoryType":"Entity"},"alertHistory":[{"alertId":9016315,"alertTypeName":"Missing","alertGeneratedTS":"2014-08-11 14:38:15","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-15 16:06:06","comments":[{"commentId":30469,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-15 16:06:06"}]},{"alertId":8978310,"alertTypeName":"New","alertGeneratedTS":"2014-06-13 00:04:42","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-08 14:12:22","comments":[{"commentId":30447,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-08 14:12:22"}]},{"alertId":8974550,"alertTypeName":"Missing","alertGeneratedTS":"2014-06-12 23:49:42","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-08-08 14:12:22","comments":[{"commentId":30446,"commentUserName":"AndrewPrice","commentText":"test","commentTS":"2014-08-08 14:12:22"}]},{"alertId":8922306,"alertTypeName":"Missing","alertGeneratedTS":"2014-05-28 11:49:09","alertBeforeValue":"","alertAfterValue":"","isAlertClear":true,"clearedByUser":"AndrewPrice","clearedOnTS":"2014-06-02 11:33:47","comments":[{"commentId":19657,"commentUserName":"AndrewPrice","commentText":"This is line 1\\\\nThis is line 2\\\\nThis is line 3","commentTS":"2014-05-30 11:11:28"},{"commentId":19675,"commentUserName":"AndrewPrice","commentText":"NM - OK","commentTS":"2014-06-02 11:33:47"}]}]}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Dashboard/updateCardOrder</td>
+    <td align="middle">post</td>
+    <td align="middle">/dashboard/updateCardOrder?cardOrder=462,481,464,467,169,465&userId=1000</td>
+    <td align="middle"></td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #e74c3c">Failed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Group/MonitorList</td>
+    <td align="middle">get</td>
+    <td align="middle">/group/monitorList?groupId=375&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"groupId":375,"monitors":[{"monitorId":1309,"monitorName":"USER TESLA.*","hasAlert":true,"isActive":true},{"monitorId":1448,"monitorName":"asfaf","hasAlert":true,"isActive":true},{"monitorId":1458,"monitorName":"new1234","hasAlert":true,"isActive":true},{"monitorId":1460,"monitorName":"Zzz","hasAlert":true,"isActive":true},{"monitorId":1480,"monitorName":"Cake","hasAlert":true,"isActive":true},{"monitorId":1553,"monitorName":"Cake2","hasAlert":true,"isActive":true}]}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Monitor/read</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitor/read?monitorId=1309&userId=1000</td>
+    <td align="middle">{"error":{"num":0,"msg":"No Error"},"data":{"monitorDefinition":{"monitorId":1309,"monitorName":"USER TESLA.*","visibility":"Private","groups":[169,215,375],"criticality":"High","entityTypeId":1,"analysisType":"Integrity Check","alertSettings":{"onMissing":true,"onNew":true,"active":true},"nodeFilter":"","entityFilter":"TESLA.*","attributes":[{"attributeTypeId":3,"orderSeqNo":1,"alert":true},{"attributeTypeId":4,"orderSeqNo":2,"alert":true},{"attributeTypeId":5,"orderSeqNo":3,"alert":true},{"attributeTypeId":6,"orderSeqNo":4,"alert":true},{"attributeTypeId":7,"orderSeqNo":5,"alert":true},{"attributeTypeId":8,"orderSeqNo":6,"alert":true},{"attributeTypeId":10,"orderSeqNo":7,"alert":true},{"attributeTypeId":11,"orderSeqNo":8,"alert":true},{"attributeTypeId":12,"orderSeqNo":9,"alert":true},{"attributeTypeId":13,"orderSeqNo":10,"alert":true},{"attributeTypeId":14,"orderSeqNo":11,"alert":true},{"attributeTypeId":15,"orderSeqNo":12,"alert":true},{"attributeTypeId":16,"orderSeqNo":13,"alert":true},{"attributeTypeId":18,"orderSeqNo":14,"alert":true},{"attributeTypeId":19,"orderSeqNo":15,"alert":true},{"attributeTypeId":20,"orderSeqNo":16,"alert":true},{"attributeTypeId":21,"orderSeqNo":17,"alert":true},{"attributeTypeId":22,"orderSeqNo":18,"alert":true},{"attributeTypeId":23,"orderSeqNo":19,"alert":true}]}}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+    <tr><p></p></tr>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">  
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>api Test Name</th>
+    <th>api Method</th>
+    <th>api Path</th
+    ><th>api Response</th
+    ><th>api Response Code</th>
+    <th>Status</th>
+    </tr>
+    <tr valign="middle" class="" bgcolor="#ecf0f1">
+    <td align="middle">Monitor/AlertCount</td>
+    <td align="middle">get</td>
+    <td align="middle">/monitorAlertCount?monitorId=1460</td>
+    <td align="middle">{"error":{"num":0,"msg":"No error"},"data":{"monitorId":1460,"monitorName":"Zzz","totalAlerts":256,"changedCount":0,"missingCount":137,"newCount":119,"lastUpdateTimestamp":"2014-08-22 10:49:04"}}</td>
+    <td align="middle">200</td>
+    <td align="middle" style="background: #2ecc71">Passed</td>
+    </tr>
+    </table> 
+  <hr size="1">
+  <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+    <tr align="middle">
+    <td bgcolor="#e74c3c"><h3><font color="#ecf0f1">Failed Tests Report</font></h3></td>
+    </tr>
+    <tr valign="middle" align="middle" bgcolor="#bdc3c7">
+    <th>Failed Test Cases</th><th>Time</th>
+    </tr>
+    
+    <tr valign="middle" class="" align="middle" bgcolor="#ecf0f1">
+    <td align="middle">AlertCount/monitorAlertCountDashboard/updateCardOrder</td>
+    <td align="middle">2014-08-22 10:49:03 -0700</td>
+    </tr>
+    </table>
+  
+ <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+    <tr align="middle">
+    <td bgcolor="#e74c3c"><h3><font color="#ecf0f1">API Test Report Summary</font></h3></td>
+    </tr>
+  <tr valign="middle" bgcolor="#bdc3c7" align="middle">
+  <th>Tests</th><th>Pass</th><th>Failures</th><th>Success rate</th><th>Time</th>
+  </tr>
+  <tr valign="middle" class="" align="middle" bgcolor="#ecf0f1">
+  <td>7</td><td>5</td><td>2</td><td>71.43%</td><td>2014-08-22 10:49:03 -0700</td>
+  </tr>
+  </table>
+  <tr><p></p></tr>
+  <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr><p></p></tr>
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <th><h3><font color="#ecf0f1">End of the API test suite</h3></th>
+  </tr>
+  </table>
+  <a href="#top">Back to top</a>
+  <table width="100%">
+  <tr>
+  <td>
+  <hr noshade="yes" size="1">
+  </td>
+  </tr>
+  </table>
+  </body>
+  </html>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html>
+    <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tesla API QA Automation Test Results</title>
+    <style type="text/css">
+      body { font-family: Lato,arial; color:#191919; font-size: 12px; }
+      table tr td, table tr th { font-family: verdana,arial,helvetica; font-size: 12px; }
+      table { table-layout: fixed; }
+      td { width: 20%; }
+      table.details tr th{ font-family: verdana,arial,helvetica; font-weight: bold; text-align:left; background:#a6caf0; }
+      table.details tr td{ background:#eeeee0; }
+      p { line-height:1.5em; margin-top:0.5em; margin-bottom:1.0em; font-size: 12px; }
+      h1 { margin: 0px 0px 5px; font-family: verdana,arial,helvetica; }
+      h3 { margin-top: 1em; margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h3 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h4 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h5 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h6 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      .Error { font-weight:bold; color:red; }
+      .Failure { font-weight:bold; color:purple; }
+      .small { font-size: 9px; }
+      a { color: #003399; }
+      a:hover { color: #888888; }
+    </style>
+    </head>
+    <body>
+    <a name="top"></a>
+  <table border="1" cellpadding="5" cellspacing="3" bordercolor="#34495e" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">  
+  <th  valign="middle" align="middle"><img src="logo.png" alt="header-logo" align="left" /><h2><font color="#ecf0f1">Tesla API Automation Framework</font></h2></th>
+  </tr>
+  </table>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <td><font color="#ecf0f1">Report generated at 2014-09-12 10:47:45 -0700</font></td><td><font color="#ecf0f1">Contact Tesla Automation Team: <a href="mailto:mohamed.elzein@xypro.com?Subject=Automation questions" target="_top"><font color="#ecf0f1">eMail Us</font></a></td>
+  </tr>
+  </table>
+  
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html>
+    <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tesla API QA Automation Test Results</title>
+    <style type="text/css">
+      body { font-family: Lato,arial; color:#191919; font-size: 12px; }
+      table tr td, table tr th { font-family: verdana,arial,helvetica; font-size: 12px; }
+      table { table-layout: fixed; }
+      td { width: 20%; }
+      table.details tr th{ font-family: verdana,arial,helvetica; font-weight: bold; text-align:left; background:#a6caf0; }
+      table.details tr td{ background:#eeeee0; }
+      p { line-height:1.5em; margin-top:0.5em; margin-bottom:1.0em; font-size: 12px; }
+      h1 { margin: 0px 0px 5px; font-family: verdana,arial,helvetica; }
+      h3 { margin-top: 1em; margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h3 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h4 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h5 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h6 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      .Error { font-weight:bold; color:red; }
+      .Failure { font-weight:bold; color:purple; }
+      .small { font-size: 9px; }
+      a { color: #003399; }
+      a:hover { color: #888888; }
+    </style>
+    </head>
+    <body>
+    <a name="top"></a>
+  <table border="1" cellpadding="5" cellspacing="3" bordercolor="#34495e" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">  
+  <th  valign="middle" align="middle"><img src="logo.png" alt="header-logo" align="left" /><h2><font color="#ecf0f1">Tesla API Automation Framework</font></h2></th>
+  </tr>
+  </table>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <td><font color="#ecf0f1">Report generated at 2019-04-27 21:41:39 -0700</font></td><td><font color="#ecf0f1">Contact Tesla Automation Team: <a href="mailto:mohamed.elzein@xypro.com?Subject=Automation questions" target="_top"><font color="#ecf0f1">eMail Us</font></a></td>
+  </tr>
+  </table>
+  
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html>
+    <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tesla API QA Automation Test Results</title>
+    <style type="text/css">
+      body { font-family: Lato,arial; color:#191919; font-size: 12px; }
+      table tr td, table tr th { font-family: verdana,arial,helvetica; font-size: 12px; }
+      table { table-layout: fixed; }
+      td { width: 20%; }
+      table.details tr th{ font-family: verdana,arial,helvetica; font-weight: bold; text-align:left; background:#a6caf0; }
+      table.details tr td{ background:#eeeee0; }
+      p { line-height:1.5em; margin-top:0.5em; margin-bottom:1.0em; font-size: 12px; }
+      h1 { margin: 0px 0px 5px; font-family: verdana,arial,helvetica; }
+      h3 { margin-top: 1em; margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h3 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h4 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h5 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      h6 { margin-bottom: 0.5em; font-family: verdana,arial,helvetica; }
+      .Error { font-weight:bold; color:red; }
+      .Failure { font-weight:bold; color:purple; }
+      .small { font-size: 9px; }
+      a { color: #003399; }
+      a:hover { color: #888888; }
+    </style>
+    </head>
+    <body>
+    <a name="top"></a>
+  <table border="1" cellpadding="5" cellspacing="3" bordercolor="#34495e" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">  
+  <th  valign="middle" align="middle"><img src="logo.png" alt="header-logo" align="left" /><h2><font color="#ecf0f1">Tesla API Automation Framework</font></h2></th>
+  </tr>
+  </table>
+    <table border="0" cellpadding="5" cellspacing="2" width=" 100%">
+  <tr valign="middle" align="middle" bgcolor="#34495e">
+  <td><font color="#ecf0f1">Report generated at 2019-06-02 19:26:16 -0700</font></td><td><font color="#ecf0f1">Contact Tesla Automation Team: <a href="mailto:mohamed.elzein@xypro.com?Subject=Automation questions" target="_top"><font color="#ecf0f1">eMail Us</font></a></td>
+  </tr>
+  </table>
+  
