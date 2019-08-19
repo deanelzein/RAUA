@@ -3,7 +3,7 @@ RAUA is a personal in-house developed Ruby based automation framework that desig
 
 
 
-## How to Run:
+### How to Run:
 
 ### Prerequisites:
 
